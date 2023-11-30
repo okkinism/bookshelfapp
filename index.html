@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Bookshelf Apps by Okky Rafa Nuggraha</title>
+</head>
+<body>
+  <header>
+    <h1>Bookshelf 📚</h1>
+  </header>
+  <main>
+    <div class="container">
+      <form id="add-book-form">
+        <h2>Tambahkan Buku Baru</h2>
+        <label for="title">Judul:</label>
+        <input type="text" id="title" required>
+  
+        <label for="author">Penulis:</label>
+        <input type="text" id="author" required>
+  
+        <label for="year">Tahun Terbit:</label>
+        <input type="date" id="year" required>
+  
+        <label for="cover">Cover Buku (URL):</label>
+        <input type="url" id="cover" placeholder="https://example.com/cover.jpg">
+  
+        <div class="checkbox-group">
+          <label for="isComplete">Selesai Dibaca</label>
+          <input type="checkbox" id="isComplete">
+        </div>
+  
+        <button type="submit">Tambahkan Buku</button>
+      </form>
+  
+      <div class="bookshelf" id="unfinished-shelf">
+        <h2>Belum Selesai Dibaca</h2>
+        <ul id="unfinished-list"></ul>
+      </div>
+  
+      <div class="bookshelf" id="finished-shelf">
+        <h2>Selesai Dibaca</h2>
+        <div class="search-container">
+          <label for="search">Cari Buku yang telah di baca:</label>
+          <input type="text" id="search" oninput="searchBooks()">
+        </div>
+        <ul id="finished-list"></ul>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 by <a href="https://github.com/okkinism">Okky Rafa Nuggraha</a></p>
+  </footer>
+  <script src="script/script.js"></script>
+</body>
+</html>
